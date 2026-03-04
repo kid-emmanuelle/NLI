@@ -4,7 +4,7 @@ import numpy as np
 def load_data_jsonl(file_path):
     return pd.read_json(file_path, lines=True)
 
-df_train = load_data_jsonl("data/multinli_1.0_train.jsonl")[:10000]
+df_train = load_data_jsonl("data/multinli_1.0_train.jsonl")[:10000] # 10k ou 50k
 df_dev_matched = load_data_jsonl("data/multinli_1.0_dev_matched.jsonl")
 df_dev_mismatched = load_data_jsonl("data/multinli_1.0_dev_mismatched.jsonl")
 
@@ -43,7 +43,7 @@ vectorizer = TfidfVectorizer(
 )
 
 # FIT on TRAIN sentence1
-vectorizer.fit(X_train_s1)
+vectorizer.fit(list(X_train_s1) + list(X_train_s2))
 X_train_s1_vec = vectorizer.transform(X_train_s1)
 X_train_s2_vec = vectorizer.transform(X_train_s2)
 

@@ -23,6 +23,14 @@ Au lieu de juste concaténer [v1, v2], les chercheurs utilisent souvent la diff�
     - Dev matched accuracy: 0.5164
     - Dev mismatched accuracy: 0.5165
 
+Fix bug: Faire le fit sur l'ensemble des textes `vectorizer.fit(list(X_train_s1) + list(X_train_s2))` et le resultat :
+- 10k :
+    - Dev matched accuracy: 0.4836
+    - Dev mismatched accuracy: 0.4964
+- 50k :
+    - Dev matched accuracy: 0.5197
+    - Dev mismatched accuracy: 0.5231
+
 ! Mais le TF-IDF ne comprend pas l'ordre des mots ni le sens profond (sémantique), ce qui est indispensable pour le NLI.
 
 ### 2. Passer aux Transformers
