@@ -10,6 +10,7 @@ Tester KFold Cross Validation :
 - 10k :
     - Dev matched accuracy: 0.4555
     - Dev mismatched accuracy: 0.4683
+- 50k : Ca sert a rien car Kfold c'est juste pour le petit dataset
 
 Le TF-IDF ne comprend pas l'ordre des mots ni le sens profond (sémantique), ce qui est indispensable pour le NLI.
 
